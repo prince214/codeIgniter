@@ -1,0 +1,130 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Structures</title>
+</head>
+<body>
+
+<hr />
+<h1>C - Structures</h1><p>Arrays allow to define type of variables that can hold several data items of the same kind. Similarly <b>structure</b> is another user defined data type available in C that allows to combine data items of different kinds.</p><p>Structures are used to represent a record. Suppose you want to keep track of your books in a library. You might want to track the following attributes about each book −</p><ul >
+<li>Title</li>
+<li>Author</li>
+<li>Subject</li>
+<li>Book ID</li>
+</ul><h2>Defining a Structure</h2><p>To define a structure, you must use the <b>struct</b> statement. The struct statement defines a new data type, with more than one member. The format of the struct statement is as follows −</p><pre>struct [structure tag] {
+
+   member definition;
+   member definition;
+   ...
+   member definition;
+} [one or more structure variables];  
+</pre><p>The <b>structure tag</b> is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure −</p><pre>struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} book;  
+</pre><h2>Accessing Structure Members</h2><p>To access any member of a structure, we use the <b>member access operator (.)</b>. The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use the keyword <b>struct</b> to define variables of structure type. The following example shows how to use a structure in a program −</p><pre><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+</span><span >#include</span><span > </span><span >&lt;string.h&gt;</span><span >
+ 
+</span><span >struct</span><span > </span><span >Books</span><span > </span><span >{</span><span >
+   </span><span >char</span><span >  title</span><span >[</span><span >50</span><span >];</span><span >
+   </span><span >char</span><span >  author</span><span >[</span><span >50</span><span >];</span><span >
+   </span><span >char</span><span >  subject</span><span >[</span><span >100</span><span >];</span><span >
+   </span><span >int</span><span >   book_id</span><span >;</span><span >
+</span><span >};</span><span >
+ 
+</span><span >int</span><span > main</span><span >(</span><span > </span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >struct</span><span > </span><span >Books</span><span > </span><span >Book1</span><span >;</span><span >        </span><span >/* Declare Book1 of type Book */</span><span >
+   </span><span >struct</span><span > </span><span >Books</span><span > </span><span >Book2</span><span >;</span><span >        </span><span >/* Declare Book2 of type Book */</span><span >
+ 
+   </span><span >/* book 1 specification */</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >title</span><span >,</span><span > </span><span >"C Programming"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >author</span><span >,</span><span > </span><span >"Nuha Ali"</span><span >);</span><span > 
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >subject</span><span >,</span><span > </span><span >"C Programming Tutorial"</span><span >);</span><span >
+   </span><span >Book1</span><span >.</span><span >book_id </span><span >=</span><span > </span><span >6495407</span><span >;</span><span >
+
+   </span><span >/* book 2 specification */</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >title</span><span >,</span><span > </span><span >"Telecom Billing"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >author</span><span >,</span><span > </span><span >"Zara Ali"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >subject</span><span >,</span><span > </span><span >"Telecom Billing Tutorial"</span><span >);</span><span >
+   </span><span >Book2</span><span >.</span><span >book_id </span><span >=</span><span > </span><span >6495700</span><span >;</span><span >
+ 
+   </span><span >/* print Book1 info */</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 1 title : %s\n"</span><span >,</span><span > </span><span >Book1</span><span >.</span><span >title</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 1 author : %s\n"</span><span >,</span><span > </span><span >Book1</span><span >.</span><span >author</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 1 subject : %s\n"</span><span >,</span><span > </span><span >Book1</span><span >.</span><span >subject</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 1 book_id : %d\n"</span><span >,</span><span > </span><span >Book1</span><span >.</span><span >book_id</span><span >);</span><span >
+
+   </span><span >/* print Book2 info */</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 2 title : %s\n"</span><span >,</span><span > </span><span >Book2</span><span >.</span><span >title</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 2 author : %s\n"</span><span >,</span><span > </span><span >Book2</span><span >.</span><span >author</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 2 subject : %s\n"</span><span >,</span><span > </span><span >Book2</span><span >.</span><span >subject</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book 2 book_id : %d\n"</span><span >,</span><span > </span><span >Book2</span><span >.</span><span >book_id</span><span >);</span><span >
+
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre><p>When the above code is compiled and executed, it produces the following result −</p><pre >Book 1 title : C Programming
+Book 1 author : Nuha Ali
+Book 1 subject : C Programming Tutorial
+Book 1 book_id : 6495407
+Book 2 title : Telecom Billing
+Book 2 author : Zara Ali
+Book 2 subject : Telecom Billing Tutorial
+Book 2 book_id : 6495700
+</pre><h2>Structures as Function Arguments</h2><p>You can pass a structure as a function argument in the same way as you pass any other variable or pointer.</p><pre><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+</span><span >#include</span><span > </span><span >&lt;string.h&gt;</span><span >
+ 
+</span><span >struct</span><span > </span><span >Books</span><span > </span><span >{</span><span >
+   </span><span >char</span><span >  title</span><span >[</span><span >50</span><span >];</span><span >
+   </span><span >char</span><span >  author</span><span >[</span><span >50</span><span >];</span><span >
+   </span><span >char</span><span >  subject</span><span >[</span><span >100</span><span >];</span><span >
+   </span><span >int</span><span >   book_id</span><span >;</span><span >
+</span><span >};</span><span >
+
+</span><span >/* function declaration */</span><span >
+</span><span >void</span><span > printBook</span><span >(</span><span > </span><span >struct</span><span > </span><span >Books</span><span > book </span><span >);</span><span >
+
+</span><span >int</span><span > main</span><span >(</span><span > </span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >struct</span><span > </span><span >Books</span><span > </span><span >Book1</span><span >;</span><span >        </span><span >/* Declare Book1 of type Book */</span><span >
+   </span><span >struct</span><span > </span><span >Books</span><span > </span><span >Book2</span><span >;</span><span >        </span><span >/* Declare Book2 of type Book */</span><span >
+ 
+   </span><span >/* book 1 specification */</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >title</span><span >,</span><span > </span><span >"C Programming"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >author</span><span >,</span><span > </span><span >"Nuha Ali"</span><span >);</span><span > 
+   strcpy</span><span >(</span><span > </span><span >Book1</span><span >.</span><span >subject</span><span >,</span><span > </span><span >"C Programming Tutorial"</span><span >);</span><span >
+   </span><span >Book1</span><span >.</span><span >book_id </span><span >=</span><span > </span><span >6495407</span><span >;</span><span >
+
+   </span><span >/* book 2 specification */</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >title</span><span >,</span><span > </span><span >"Telecom Billing"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >author</span><span >,</span><span > </span><span >"Zara Ali"</span><span >);</span><span >
+   strcpy</span><span >(</span><span > </span><span >Book2</span><span >.</span><span >subject</span><span >,</span><span > </span><span >"Telecom Billing Tutorial"</span><span >);</span><span >
+   </span><span >Book2</span><span >.</span><span >book_id </span><span >=</span><span > </span><span >6495700</span><span >;</span><span >
+ 
+   </span><span >/* print Book1 info */</span><span >
+   printBook</span><span >(</span><span > </span><span >Book1</span><span > </span><span >);</span><span >
+
+   </span><span >/* Print Book2 info */</span><span >
+   printBook</span><span >(</span><span > </span><span >Book2</span><span > </span><span >);</span><span >
+
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span><span >
+
+</span><span >void</span><span > printBook</span><span >(</span><span > </span><span >struct</span><span > </span><span >Books</span><span > book </span><span >)</span><span > </span><span >{</span><span >
+
+   printf</span><span >(</span><span > </span><span >"Book title : %s\n"</span><span >,</span><span > book</span><span >.</span><span >title</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book author : %s\n"</span><span >,</span><span > book</span><span >.</span><span >author</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book subject : %s\n"</span><span >,</span><span > book</span><span >.</span><span >subject</span><span >);</span><span >
+   printf</span><span >(</span><span > </span><span >"Book book_id : %d\n"</span><span >,</span><span > book</span><span >.</span><span >book_id</span><span >);</span><span >
+</span><span >}</span></pre><p>When the above code is compiled and executed, it produces the following result −</p><pre >Book title : C Programming
+Book author : Nuha Ali
+Book subject : C Programming Tutorial
+Book book_id : 6495407
+Book title : Telecom Billing
+Book author : Zara Ali
+Book subject : Telecom Billing Tutorial
+Book book_id : 6495700
+</pre>
+</body>
+</html>

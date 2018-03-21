@@ -1,0 +1,163 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>HTML Tables</title>
+</head>
+<body>
+
+
+<h1>HTML Tables</h1>
+<hr />
+<p>The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and columns of cells.</p><p>The HTML tables are created using the <b>&lt;table&gt;</b> tag in which the <b>&lt;tr&gt;</b> tag is used to create table rows and <b>&lt;td&gt;</b> tag is used to create data cells.</p><h3>Example</h3><pre style="cursor: default;"><span>&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >HTML Tables</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;table</span><span > </span><span >border</span><span >=</span><span >"1"</span><span >&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Row 1, Column 1</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Row 1, Column 2</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Row 2, Column 1</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Row 2, Column 2</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;/table&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<table border="1" style="border-collapse: separate; border-spacing: 1px;">
+<tbody><tr>
+<td>Row 1, Column 1</td>
+<td>Row 1, Column 2</td>
+</tr>
+<tr>
+<td>Row 2, Column 1</td>
+<td>Row 2, Column 2</td>
+</tr>
+</tbody></table>
+</div><p>Here <b>border</b> is an attribute of &lt;table&gt; tag and it is used to put a border across all the cells. If you do not need a border then you can use border="0".</p><h2>Table Heading</h2><p>Table heading can be defined using <b>&lt;th&gt;</b> tag. This tag will be put to replace &lt;td&gt; tag, which is used to represent actual data cell. Normally you will put your top row as table heading as shown below, otherwise you can use &lt;th&gt; element in any row.</p><h3>Example</h3><pre style="cursor: default;"><span>&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >HTML Table Header</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;table</span><span > </span><span >border</span><span >=</span><span >"1"</span><span >&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Name</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Salary</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Ramesh Raman</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >5000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Shabbir Hussein</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >7000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;/table&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<table border="1" style="border-collapse: separate; border-spacing: 1px;">
+<tbody><tr>
+<th style="background:#fff;">Name</th>
+<th style="background:#fff;">Salary</th>
+</tr>
+<tr>
+<td>Ramesh Raman</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>Shabbir Hussein</td>
+<td>7000</td>
+</tr>
+</tbody></table>
+</div><h2>Cellpadding and Cellspacing Attributes</h2><p>There are two attribiutes called  <i>cellpadding</i> and <i>cellspacing</i> which you will use to adjust the white space in your table cells. The cellspacing attribute defines the width of the border, while cellpadding represents the distance between cell borders and the content within a cell.</p><h3>Example</h3><pre style="cursor: default;"><span>&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >HTML Table Cellpadding</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;table</span><span > </span><span >border</span><span >=</span><span >"1"</span><span > </span><span >cellpadding</span><span >=</span><span >"5"</span><span > </span><span >cellspacing</span><span >=</span><span >"5"</span><span >&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Name</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Salary</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Ramesh Raman</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >5000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Shabbir Hussein</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >7000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;/table&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><pre style="cursor: default;"><span>&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >HTML Table Cellpadding</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;table</span><span > </span><span >border</span><span >=</span><span >"1"</span><span > </span><span >cellpadding</span><span >=</span><span >"5"</span><span > </span><span >cellspacing</span><span >=</span><span >"5"</span><span >&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Name</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Salary</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Ramesh Raman</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >5000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >Shabbir Hussein</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;td&gt;</span><span >7000</span><span >&lt;/td&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;/table&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<table border="1" style="padding:5px !important;  border-spacing: 1px;  border-collapse: separate;">
+<tbody><tr>
+<th style="padding:5px;background:#fff;">Name</th>
+<th style="padding:5px;background:#fff;">Salary</th>
+</tr>
+<tr>
+<td style="padding:5px;">Ramesh Raman</td>
+<td style="padding:5px;">5000</td>
+</tr>
+<tr>
+<td style="padding:5px;">Shabbir Hussein</td>
+<td style="padding:5px;">7000</td>
+</tr>
+</tbody></table>
+</div><h2>Colspan and Rowspan Attributes</h2><p>You will use <b>colspan</b> attribute if you want to merge two or more columns into a single column. Similar way you will use <b>rowspan</b> if you want to merge two or more rows.</p><h3>Example</h3><pre style="cursor: default;"><span>&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >HTML Table Colspan/Rowspan</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;table</span><span > </span><span >border</span><span >=</span><span >"1"</span><span >&gt;</span><span >
+</span><span >&lt;tr&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Column 1</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Column 2</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;th&gt;</span><span >Column 3</span><span >&lt;/th&gt;</span><span >
+</span><span >&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;&lt;td</span><span > </span><span >rowspan</span><span >=</span><span >"2"</span><span >&gt;</span><span >Row 1 Cell 1</span><span >&lt;/td&gt;&lt;td&gt;</span><span >Row 1 Cell 2</span><span >&lt;/td&gt;&lt;td&gt;</span><span >Row 1 Cell 3</span><span >&lt;/td&gt;&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;&lt;td&gt;</span><span >Row 2 Cell 2</span><span >&lt;/td&gt;&lt;td&gt;</span><span >Row 2 Cell 3</span><span >&lt;/td&gt;&lt;/tr&gt;</span><span >
+</span><span >&lt;tr&gt;&lt;td</span><span > </span><span >colspan</span><span >=</span><span >"3"</span><span >&gt;</span><span >Row 3 Cell 1</span><span >&lt;/td&gt;&lt;/tr&gt;</span><span >
+</span><span >&lt;/table&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<table border="1" style="border-collapse: separate;border-spacing: 1px;">
+<tbody><tr>
+<th style="background:#fff;">Column 1</th>
+<th style="background:#fff;">Column 2</th>
+<th style="background:#fff;">Column 3</th>
+</tr>
+<tr><td rowspan="2">Row 1 Cell 1</td>
+<td>Row 1 Cell 2</td><td>Row 1 Cell 3</td></tr>
+<tr><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td></tr>
+<tr><td colspan="3">Row 3 Cell 1</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>recursion</title>
+</head>
+<body>
+<h1> Recursion</h1>
+<hr />
+<p>Recursion is the process of repeating items in a self-similar way. In programming languages, if a program allows you to call a function inside the same function, then it is called a recursive call of the function.</p><pre ><span >void</span><span > recursion</span><span >()</span><span > </span><span >{</span><span >
+   recursion</span><span >();</span><span > </span><span >/* function calls itself */</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span > main</span><span >()</span><span > </span><span >{</span><span >
+   recursion</span><span >();</span><span >
+</span><span >}</span></pre><p>The C programming language supports recursion, i.e., a function to call itself. But while using recursion, programmers need to be careful to define an exit condition from the function, otherwise it will go into an infinite loop.</p><p>Recursive functions are very useful to solve many mathematical problems, such as calculating the factorial of a number, generating Fibonacci series, etc.</p><h2>Number Factorial</h2><p>The following example calculates the factorial of a given number using a recursive function −</p><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > factorial</span><span >(</span><span >unsigned</span><span > </span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >&lt;=</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > i </span><span >*</span><span > factorial</span><span >(</span><span >i </span><span >-</span><span > </span><span >1</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+   </span><span >int</span><span > i </span><span >=</span><span > </span><span >15</span><span >;</span><span >
+   printf</span><span >(</span><span >"Factorial of %d is %d\n"</span><span >,</span><span > i</span><span >,</span><span > factorial</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > factorial</span><span >(</span><span >unsigned</span><span > </span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >&lt;=</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > i </span><span >*</span><span > factorial</span><span >(</span><span >i </span><span >-</span><span > </span><span >1</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+   </span><span >int</span><span > i </span><span >=</span><span > </span><span >15</span><span >;</span><span >
+   printf</span><span >(</span><span >"Factorial of %d is %d\n"</span><span >,</span><span > i</span><span >,</span><span > factorial</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre><p>When the above code is compiled and executed, it produces the following result −</p><pre class="result notranslate">Factorial of 15 is 2004310016<pre class="result notranslate">Factorial of 15 is 2004310016<h2>Fibonacci Series</h2><p>The following example generates the Fibonacci series for a given number using a recursive function −</p><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > fibonacci</span><span >(</span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >==</span><span > </span><span >0</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+   </span><span >}</span><span >
+	
+   </span><span >if</span><span >(</span><span >i </span><span >==</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > fibonacci</span><span >(</span><span >i</span><span >-</span><span >1</span><span >)</span><span > </span><span >+</span><span > fibonacci</span><span >(</span><span >i</span><span >-</span><span >2</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+
+   </span><span >int</span><span > i</span><span >;</span><span >
+	
+   </span><span >for</span><span > </span><span >(</span><span >i </span><span >=</span><span > </span><span >0</span><span >;</span><span > i </span><span >&lt;</span><span > </span><span >10</span><span >;</span><span > i</span><span >++)</span><span > </span><span >{</span><span >
+      printf</span><span >(</span><span >"%d\t\n"</span><span >,</span><span > fibonacci</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >}</span><span >
+	
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre>- <h1>Recursion</h1><p>Recursion is the process of repeating items in a self-similar way. In programming languages, if a program allows you to call a function inside the same function, then it is called a recursive call of the function.</p><pre ><span >void</span><span > recursion</span><span >()</span><span > </span><span >{</span><span >
+   recursion</span><span >();</span><span > </span><span >/* function calls itself */</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span > main</span><span >()</span><span > </span><span >{</span><span >
+   recursion</span><span >();</span><span >
+</span><span >}</span></pre><p>The C programming language supports recursion, i.e., a function to call itself. But while using recursion, programmers need to be careful to define an exit condition from the function, otherwise it will go into an infinite loop.</p><p>Recursive functions are very useful to solve many mathematical problems, such as calculating the factorial of a number, generating Fibonacci series, etc.</p><h2>Number Factorial</h2><p>The following example calculates the factorial of a given number using a recursive function −</p><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > factorial</span><span >(</span><span >unsigned</span><span > </span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >&lt;=</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > i </span><span >*</span><span > factorial</span><span >(</span><span >i </span><span >-</span><span > </span><span >1</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+   </span><span >int</span><span > i </span><span >=</span><span > </span><span >15</span><span >;</span><span >
+   printf</span><span >(</span><span >"Factorial of %d is %d\n"</span><span >,</span><span > i</span><span >,</span><span > factorial</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > factorial</span><span >(</span><span >unsigned</span><span > </span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >&lt;=</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > i </span><span >*</span><span > factorial</span><span >(</span><span >i </span><span >-</span><span > </span><span >1</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+   </span><span >int</span><span > i </span><span >=</span><span > </span><span >15</span><span >;</span><span >
+   printf</span><span >(</span><span >"Factorial of %d is %d\n"</span><span >,</span><span > i</span><span >,</span><span > factorial</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre><p>When the above code is compiled and executed, it produces the following result −</p></pre></pre><h2>Fibonacci Series</h2><p>The following example generates the Fibonacci series for a given number using a recursive function −</p><pre ><span >#include</span><span > </span><span >&lt;stdio.h&gt;</span><span >
+
+</span><span >int</span><span > fibonacci</span><span >(</span><span >int</span><span > i</span><span >)</span><span > </span><span >{</span><span >
+
+   </span><span >if</span><span >(</span><span >i </span><span >==</span><span > </span><span >0</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+   </span><span >}</span><span >
+	
+   </span><span >if</span><span >(</span><span >i </span><span >==</span><span > </span><span >1</span><span >)</span><span > </span><span >{</span><span >
+      </span><span >return</span><span > </span><span >1</span><span >;</span><span >
+   </span><span >}</span><span >
+   </span><span >return</span><span > fibonacci</span><span >(</span><span >i</span><span >-</span><span >1</span><span >)</span><span > </span><span >+</span><span > fibonacci</span><span >(</span><span >i</span><span >-</span><span >2</span><span >);</span><span >
+</span><span >}</span><span >
+
+</span><span >int</span><span >  main</span><span >()</span><span > </span><span >{</span><span >
+
+   </span><span >int</span><span > i</span><span >;</span><span >
+	
+   </span><span >for</span><span > </span><span >(</span><span >i </span><span >=</span><span > </span><span >0</span><span >;</span><span > i </span><span >&lt;</span><span > </span><span >10</span><span >;</span><span > i</span><span >++)</span><span > </span><span >{</span><span >
+      printf</span><span >(</span><span >"%d\t\n"</span><span >,</span><span > fibonacci</span><span >(</span><span >i</span><span >));</span><span >
+   </span><span >}</span><span >
+	
+   </span><span >return</span><span > </span><span >0</span><span >;</span><span >
+</span><span >}</span></pre>
+</body>
+</html>

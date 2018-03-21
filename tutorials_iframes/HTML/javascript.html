@@ -1,0 +1,61 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Introduction</title>
+</head>
+<body>
+
+
+<h1>HTML Javascript</h1>
+<hr />
+<p>A <b>script</b> is a small piece of program that can add interactivity to your website. For example, a script could generate a pop-up alert box message, or provide a dropdown menu. This script could be written using Javascript or VBScript.</p><p>Now a days only <b>Javascript</b> and associated frameworks are being used by most of the web developers, VBScript is not even supported by various major browsers.</p><p>You can keep Javascript code in a separate file and then include it whereever it's needed, or you can define functionality inside HTML document itself. Let's see both the cases one by one with suitable examples.</p><h2>External Javascript</h2><p>If you are going to define a functionality which will be used in various HTML documents then it's better to keep that functionality in a separate Javascript file and then include that file in your HTML documents. A Javascript file will have extension as <b>.js</b> and it will be included in HTML files using &lt;script&gt; tag.</p><h3>Example</h3><p>Consider we define  a small function using Javascript in <b>script.js</b> which has following code:</p><pre><span >function</span><span > </span><span>Hello</span><span >()</span><span >
+</span><span >{</span><span >
+    alert</span><span >(</span><span >"Hello, World"</span><span >);</span><span >
+</span><span >}</span></pre><p>Now let's make use of the above external Javascript file in our following HTML document:</p><pre  style="cursor: default;"><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Javascript External Script</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;script</span><span > </span><span >src</span><span >=</span><span >"/html/script.js"</span><span > </span><span >type</span><span >=</span><span >"text/javascript"</span><span >/&gt;&lt;/script&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"button"</span><span > </span><span >onclick</span><span >=</span><span >"</span><span>Hello</span><span >();</span><span >"</span><span > </span><span >name</span><span >=</span><span >"ok"</span><span > </span><span >value</span><span >=</span><span >"Click Me"</span><span >  </span><span >/&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result, where you can try to click on the given button:</p><p>You can write your script code directly into your HTML document. Usually we keep script code in header of the document using &lt;script&gt; tag, otherwise there is no restriction and you can put your source code anywhere in the document but inside &lt;script&gt; tag.</p><h3>Example</h3><pre ><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Javascript Internal Script</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;base</span><span > </span><span >href</span><span >=</span><span >"https://www.tutorialspoint.com/"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;script</span><span > </span><span >type</span><span >=</span><span >"text/javascript"</span><span >&gt;</span><span >
+</span><span >function</span><span > </span><span>Hello</span><span >(){</span><span >
+   alert</span><span >(</span><span >"Hello, World"</span><span >);</span><span >
+</span><span >}</span><span >
+</span><span >&lt;/script&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"button"</span><span > </span><span >onclick</span><span >=</span><span >"</span><span>Hello</span><span >();</span><span >"</span><span > </span><span >name</span><span >=</span><span >"ok"</span><span > </span><span >value</span><span >=</span><span >"Click Me"</span><span >  </span><span >/&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result, where you can try to click on the given button:</p><p>Event handlers are nothing but simply defined functions which can be called against any mouse or keyboard event. You can define your business logic inside your event handler which can vary from a single to 1000s of line code.</p><p>Following example explains how to write an event handler. Let's write one simple function <i>EventHandler()</i> in the header of the document. We will call this function when any user brings mouse over a paragraph.</p><pre ><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Event Handlers Example</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;base</span><span > </span><span >href</span><span >=</span><span >"https://www.tutorialspoint.com/"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;script</span><span > </span><span >type</span><span >=</span><span >"text/javascript"</span><span >&gt;</span><span >
+</span><span >function</span><span > </span><span>EventHandler</span><span >(){</span><span >
+   alert</span><span >(</span><span >"I'm event handler!!"</span><span >);</span><span >
+</span><span >}</span><span >
+</span><span >&lt;/script&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;p</span><span > </span><span >onmouseover</span><span >=</span><span >"</span><span>EventHandler</span><span >();</span><span >"</span><span >&gt;</span><span >Bring your mouse here to see an alert</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>Now this will produce following result. Bring your mouse over this line and see the result:</p><div class="result notranslate">
+<script type="text/javascript">
+function EventHandler(){
+   alert("I'm event handler!!");
+}
+</script>
+<p onmouseover="EventHandler();">Bring your mouse here to see an alert</p>
+</div></div>
+<h2>Default Scripting Language</h2><p>There may be a situation when you will include multiple script files and ultimately using multiple &lt;script&gt; tags. You can specify a default scripting language for all your <i>script</i> tags. This saves you from specifying the language everytime you use a script tag within the page. Below is the example: </p><pre><span >&lt;meta</span><span > </span><span >http-equiv</span><span >=</span><span >"Content-Script-Type"</span><span > </span><span >content</span><span >=</span><span >"text/JavaScript"</span><span > </span><span >/&gt;</span></pre><p>Note that you can still override the default by specifying a language within the script tag.</p>
+</body>
+</html>

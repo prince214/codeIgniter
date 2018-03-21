@@ -1,0 +1,68 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Introduction</title>
+</head>
+<body>
+
+<hr />
+<h1>HTML Basic Tags</h1><h2>Heading Tags</h2><p>Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements <b>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;</b>. While displaying any heading, browser adds one line before and one line after <p>The <b>&lt;p&gt;</b> tag offers a way to structure your text into different paragraphs. Each paragraph of text should go in between an opening &lt;p&gt; and a closing &lt;/p&gt; tag as shown below in the example:</p><h3>Example</h3><pre><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Paragraph Example</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >Here is a first paragraph of text.</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >Here is a second paragraph of text.</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >Here is a third paragraph of text.</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><div >
+<p>Here is a first paragraph of text.</p>
+<p>Here is a second paragraph of text.</p>
+<p>Here is a third paragraph of text.</p>
+</div><h2>Line Break Tag</h2><p>Whenever you use the <b>&lt;br /&gt;</b> element, anything following it starts from the next line. This tag is an example of an <b>empty</b> element, where you do not need opening and closing tags, as there is nothing to go in between them.</p><p>The &lt;br /&gt; tag has a space between the characters <b>br</b> and the forward slash. If you omit this space, older browsers will have trouble rendering the line break, while if you miss the forward slash character and just use &lt;br&gt; it is not valid in XHTML</p><h3>Example</h3><pre><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Line Break  Example</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >Hello</span><span >&lt;br</span><span > </span><span >/&gt;</span><span >
+You delivered your assignment ontime.</span><span >&lt;br</span><span > </span><span >/&gt;</span><span >
+Thanks</span><span >&lt;br</span><span > </span><span >/&gt;</span><span >
+Mahnaz</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p>Hello<br>
+You delivered your assignment ontime.<br>
+Thanks<br>
+Mahnaz</p>
+</div><h2>Horizontal Lines</h2><p>Horizontal lines are used to visually break up sections of a document. The <b>&lt;hr&gt;</b> tag creates a line from the current position in the document to the right margin and breaks the line accordingly.</p><p>For example you may want to give a line between two paragraphs as in the given example below:</p><h3>Example</h3><pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Horizontal Line Example</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >This is paragraph one and should be on top</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;hr</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;p&gt;</span><span >This is paragraph two and should be at bottom</span><span >&lt;/p&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p>This is paragraph one and should be on top</p>
+<hr>
+<p>This is paragraph two and should be at bottom</p>
+</div>that heading.</p><h3>Example</h3><pre><span >&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Heading Example</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;h1&gt;</span><span >This is heading 1</span><span >&lt;/h1&gt;</span><span >
+</span><span >&lt;h2&gt;</span><span >This is heading 2</span><span >&lt;/h2&gt;</span><span >
+</span><span >&lt;h3&gt;</span><span >This is heading 3</span><span >&lt;/h3&gt;</span><span >
+</span><span >&lt;h4&gt;</span><span >This is heading 4</span><span >&lt;/h4&gt;</span><span >
+</span><span >&lt;h5&gt;</span><span >This is heading 5</span><span >&lt;/h5&gt;</span><span >
+</span><span >&lt;h6&gt;</span><span >This is heading 6</span><span >&lt;/h6&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><img src="/html/images/html_heading_tags.jpg" alt="HTML Heading Tags"><h2>Paragraph Tag</h2>
+</body>
+</html>

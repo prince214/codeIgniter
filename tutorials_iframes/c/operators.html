@@ -1,0 +1,192 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Introduction</title>
+</head>
+<body>
+<h1> Introduction</h1>
+<hr />
+<h1>C - Operators</h1>
+    <p>An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language is rich in built-in operators and provides the following types of operators −</p>
+    <ul >
+<li>Arithmetic Operators</li>
+<li>Relational Operators</li>
+<li>Logical Operators</li>
+<li>Bitwise Operators</li>
+<li>Assignment Operators</li>
+<li>Misc Operators</li>
+</ul>
+    <h2>Arithmetic Operators</h2>
+    <p>The following table shows all the arithmetic operators supported by the C language. Assume variable <b>A</b> holds 10 and variable <b>B</b> holds 20 then −</p>
+    <table >
+<tbody><tr>
+<th style="width:10%">Operator</th>
+<th style="width:55%;">Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Adds two operands.</td>
+<td>A + B = 30</td>
+</tr>
+<tr>
+<td>−</td>
+<td>Subtracts second operand from the first.</td>
+<td>A − B = -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplies both operands.</td>
+<td>A * B = 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Divides numerator by de-numerator.</td>
+<td>B / A = 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus Operator and remainder of after an integer division.</td>
+<td>B % A = 0</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Increment operator increases the integer value by one.</td>
+<td>A++ = 11</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decrement operator decreases the integer value by one.</td>
+<td>A-- = 9</td>
+</tr>
+</tbody></table>
+    <h2>Relational Operators</h2>
+    <p>The following table shows all the relational operators supported by C. Assume variable <b>A</b> holds 10 and variable <b>B</b> holds 20 then −</p>
+    <p><a href="/cprogramming/c_relational_operators.htm">Show Examples</a></p>
+    <table >
+<tbody><tr>
+<th style="width:10%">Operator</th>
+<th style="width:55%;">Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>==</td>
+<td>Checks if the values of two operands are equal or not. If yes, then the condition becomes true.</td>
+<td>(A == B) is not true. </td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.</td>
+<td>(A != B) is true.</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Checks if the value of left  operand is greater than the value of right operand. If yes, then the condition becomes true.</td>
+<td>(A &gt; B) is not true.</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true.</td>
+<td>(A &lt; B) is true.</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true.</td>
+<td>(A &gt;= B) is not true.</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.</td>
+<td>(A &lt;= B) is true.</td>
+</tr>
+</tbody></table>
+    <h2>Logical Operators</h2>
+    <p>Following table shows all the logical operators supported by C language. Assume variable <b>A</b> holds 1 and variable <b>B</b> holds 0, then −</p>
+    <p><a href="/cprogramming/c_logical_operators.htm">Show Examples</a></p>
+    <table >
+<tbody><tr>
+<th style="width:10%">Operator</th>
+<th style="width:55%;">Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.</td>
+<td>(A &amp;&amp; B) is false.</td>
+</tr>
+<tr>
+<td>||</td>
+<td>Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.</td>
+<td>(A || B) is true.</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Called Logical NOT Operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false.</td>
+<td>!(A &amp;&amp; B) is true.</td>
+</tr>
+</tbody></table><h2>Assignment Operators</h2>
+    <p>The following table lists the assignment operators supported by the C language −</p>
+    <table >
+<tbody><tr>
+<th style="width:10%">Operator</th>
+<th style="width:55%;">Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>=</td>
+<td>Simple assignment operator. Assigns values from right side operands to left side operand</td>
+<td>C = A + B will assign the value of A + B to C</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>Add AND assignment operator. It adds the right operand to the left operand and assign the result to the left operand.</td>
+<td>C += A is equivalent to C = C + A</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand.</td>
+<td>C -= A is equivalent to C = C - A</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>Multiply AND assignment operator. It multiplies the right operand with the left operand and assigns the result to the left operand.</td>
+<td>C *= A is equivalent to C = C * A</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>Divide AND assignment operator. It divides the left operand with the right operand and assigns the result to the left operand.</td>
+<td>C /= A is equivalent to C = C / A</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>Modulus AND assignment operator. It takes modulus using two operands and assigns the result to the left operand.</td>
+<td>C %= A is equivalent to C = C % A</td>
+</tr>
+<tr>
+<td>&lt;&lt;=</td>
+<td>Left shift AND assignment operator.</td>
+<td>C &lt;&lt;= 2 is same as  C = C &lt;&lt; 2</td>
+</tr>
+<tr>
+<td>&gt;&gt;=</td>
+<td>Right shift AND assignment operator.</td>
+<td>C &gt;&gt;= 2 is same as  C = C &gt;&gt; 2</td>
+</tr>
+<tr>
+<td>&amp;=</td>
+<td>Bitwise AND assignment operator.</td>
+<td>C &amp;= 2 is same as  C = C &amp; 2</td>
+</tr>
+<tr>
+<td>^=</td>
+<td>Bitwise exclusive OR and assignment operator.</td>
+<td>C ^= 2 is same as  C = C ^ 2</td>
+</tr>
+<tr>
+<td>|=</td>
+<td>Bitwise inclusive OR and assignment operator.</td>
+<td>C |= 2 is same as  C = C | 2</td>
+</tr>
+</tbody></table>
+</body>
+</html>

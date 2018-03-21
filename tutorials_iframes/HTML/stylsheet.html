@@ -1,0 +1,120 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Introduction</title>
+</head>
+<body>
+
+<h1>HTML Style Sheet</h1>
+<hr />
+<p>Cascading Style Sheets (CSS) describe how documents are presented on screens, in print, or perhaps how they are pronounced. W3C has actively promoted the use of style sheets on the Web since the Consortium was founded in 1994.</p><p>Cascading Style Sheets (CSS) provide easy and effective alternatives to specify various attributes for the HTML tags.  Using CSS, you can specify a number of style properties for a given HTML element. Each property has a name and a value, separated by a colon (:). Each property declaration is separated by a semi-colon (;).</p><h3>Example</h3><p>First let's consider an example of HTML document which makes use of &lt;font&gt; tag and associated attributes to specify text color and font size:</p><pre  style="cursor: default;"><span >&lt;!DOCTYPE html&gt;</span><span>
+</span><span>&lt;html&gt;</span><span>
+</span><span>&lt;head&gt;</span><span>
+</span><span>&lt;title&gt;</span><span>HTML CSS</span><span>&lt;/title&gt;</span><span>
+</span><span>&lt;/head&gt;</span><span>
+</span><span>&lt;body&gt;</span><span>
+</span><span>&lt;p&gt;&lt;font</span><span> </span><span >color</span><span>=</span><span>"green"</span><span> </span><span >size</span><span>=</span><span>"5"</span><span>&gt;</span><span>Hello, World!</span><span>&lt;/font&gt;&lt;/p&gt;</span><span>
+</span><span>&lt;/body&gt;</span><span>
+</span><span>&lt;/html&gt;</span></pre><p>We can re-write above example with the help of Style Sheet as follows:</p><pre ><span >&lt;!DOCTYPE html&gt;</span><span>
+</span><span>&lt;html&gt;</span><span>
+</span><span>&lt;head&gt;</span><span>
+</span><span>&lt;title&gt;</span><span>HTML CSS</span><span>&lt;/title&gt;</span><span>
+</span><span>&lt;/head&gt;</span><span>
+</span><span>&lt;body&gt;</span><span>
+</span><span>&lt;p</span><span> </span><span >style</span><span>=</span><span>"</span><span>color</span><span>:</span><span>green</span><span>;</span><span>font</span><span>-</span><span>size</span><span>:</span><span >24px</span><span>;</span><span>"</span><span>&gt;</span><span>Hello, World!</span><span>&lt;/p&gt;</span><span>
+</span><span>&lt;/body&gt;</span><span>
+</span><span>&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p style="color:green;font-size:24px;">Hello, World!</p>
+</div><p>You can use CSS in three ways in your HTML document:</p><ul >
+<li><p><b>External Style Sheet</b> - Define style sheet rules in a separate .css file and then include that file in your HTML document using HTML &lt;link&gt; tag.</p></li>
+<li><p><b>Internal Style Sheet</b> - Define style sheet rules in header section of the HTML document using &lt;style&gt; tag.</p></li>
+<li><p><b>Inline Style Sheet</b> - Define style sheet rules directly along-with the HTML elements using <b>style</b> attribute.</p></li>
+</ul><p>Let's see all the three cases one by one with the help of suitable examples.</p><h2>External Style Sheet</h2><p>If you need to use your style sheet to various pages, then its always recommended to define a common style sheet in a separate file. A cascading style sheet file will have extension as <b>.css</b> and it will be included in HTML files using &lt;link&gt; tag.</p><h3>Example</h3><p>Consider we define  a style sheet file <b>style.css</b> which has following rules:</p><pre class="prettyprint notranslate prettyprinted"><span>.</span><span>red</span><span>{</span><span>
+   color</span><span>:</span><span> red</span><span>;</span><span>
+</span><span>}</span><span>
+</span><span>.</span><span>thick</span><span>{</span><span>
+   font</span><span>-</span><span>size</span><span>:</span><span >20px</span><span>;</span><span>
+</span><span>}</span><span>
+</span><span>.</span><span>green</span><span>{</span><span>
+   color</span><span>:</span><span>green</span><span>;</span><span>
+</span><span>}</span></pre><p>Here we defined three CSS rules which will be applicable to three different classes defined for the HTML tags. I suggest you should not bother about how these rules are being defined because you will learn them while studying CSS. Now let's make use of the above external CSS file in our following HTML document:</p><pre ><span >&lt;!DOCTYPE html&gt;</span><span>
+</span><span>&lt;html&gt;</span><span>
+</span><span>&lt;head&gt;</span><span>
+</span><span>&lt;title&gt;</span><span>HTML External CSS</span><span>&lt;/title&gt;</span><span>
+</span><span>&lt;link</span><span> </span><span >rel</span><span>=</span><span>"stylesheet"</span><span> </span><span >type</span><span>=</span><span>"text/css"</span><span> </span><span >href</span><span>=</span><span>"/html/style.css"</span><span>&gt;</span><span>
+</span><span>&lt;/head&gt;</span><span>
+</span><span>&lt;body&gt;</span><span>
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"red"</span><span>&gt;</span><span>This is red</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"thick"</span><span>&gt;</span><span>This is thick</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"green"</span><span>&gt;</span><span>This is green</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"thick green"</span><span>&gt;</span><span>This is thick and green</span><span>&lt;/p&gt;</span><span>
+</span><span>&lt;/body&gt;</span><span>
+</span><span>&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p style="color:red;">This is red</p>
+
+<p style="font-size:20px;">This is thick</p>
+
+<p style="color:green;">This is green</p>
+
+<p style="color:green;font-size:20px;">This is thick and green</p>
+</div><h2>Internal Style Sheet</h2><p>If you want to apply Style Sheet rules to a single document only then you can include those rules in header section of the HTML document using &lt;style&gt; tag.</p><p>Rules defined in internal style sheet overrides the rules defined in an external CSS file.</p><h3>Example</h3><p>Let's re-write above example once again, but here we will write style sheet rules in the same HTML document using &lt;style&gt; tag:</p><pre ><span >&lt;!DOCTYPE html&gt;</span><span>
+</span><span>&lt;html&gt;</span><span>
+</span><span>&lt;head&gt;</span><span>
+</span><span>&lt;title&gt;</span><span>HTML Internal CSS</span><span>&lt;/title&gt;</span><span>
+</span><span>&lt;style</span><span> </span><span >type</span><span>=</span><span>"text/css"</span><span>&gt;</span><span>
+</span><span>.</span><span>red</span><span>{</span><span>
+   color</span><span>:</span><span> red</span><span>;</span><span>
+</span><span>}</span><span>
+</span><span>.</span><span>thick</span><span>{</span><span>
+   font</span><span>-</span><span>size</span><span>:</span><span >20px</span><span>;</span><span>
+</span><span>}</span><span>
+</span><span>.</span><span>green</span><span>{</span><span>
+   color</span><span>:</span><span>green</span><span>;</span><span>
+</span><span>}</span><span>
+</span><span>&lt;/style&gt;</span><span>
+</span><span>&lt;/head&gt;</span><span>
+</span><span>&lt;body&gt;</span><span>
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"red"</span><span>&gt;</span><span>This is red</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"thick"</span><span>&gt;</span><span>This is thick</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"green"</span><span>&gt;</span><span>This is green</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >class</span><span>=</span><span>"thick green"</span><span>&gt;</span><span>This is thick and green</span><span>&lt;/p&gt;</span><span>
+</span><span>&lt;/body&gt;</span><span>
+</span><span>&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p style="color:red;">This is red</p>
+
+<p style="font-size:20px;">This is thick</p>
+
+<p style="color:green;">This is green</p>
+
+<p style="color:green;font-size:20px;">This is thick and green</p>
+</div><h2>Inline Style Sheet</h2><p>You can apply style sheet rules directly to any HTML element using <b>style</b> attribute of the relevant tag. This should be done only when you are interested to make a particular change in any HTML element only.</p><p>Rules defined inline with the element overrides the rules defined in an external CSS file as well as the rules defined in &lt;style&gt; element.</p><h3>Example</h3><p>Let's re-write above example once again, but here we will write style sheet rules along with the HTML elements using <b>style</b> attribute of those elements.</p><pre  style="cursor: default;"><span >&lt;!DOCTYPE html&gt;</span><span>
+</span><span>&lt;html&gt;</span><span>
+</span><span>&lt;head&gt;</span><span>
+</span><span>&lt;title&gt;</span><span>HTML Inline CSS</span><span>&lt;/title&gt;</span><span>
+</span><span>&lt;/head&gt;</span><span>
+</span><span>&lt;body&gt;</span><span>
+</span><span>&lt;p</span><span> </span><span >style</span><span>=</span><span>"</span><span>color</span><span>:</span><span>red</span><span>;</span><span>"</span><span>&gt;</span><span>This is red</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >style</span><span>=</span><span>"</span><span>font</span><span>-</span><span>size</span><span>:</span><span >20px</span><span>;</span><span>"</span><span>&gt;</span><span>This is thick</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >style</span><span>=</span><span>"</span><span>color</span><span>:</span><span>green</span><span>;</span><span>"</span><span>&gt;</span><span>This is green</span><span>&lt;/p&gt;</span><span>
+
+</span><span>&lt;p</span><span> </span><span >style</span><span>=</span><span>"</span><span>color</span><span>:</span><span>green</span><span>;</span><span>font</span><span>-</span><span>size</span><span>:</span><span >20px</span><span>;</span><span>"</span><span>&gt;</span><span>This is thick and green</span><span>&lt;/p&gt;</span><span>
+</span><span>&lt;/body&gt;</span><span>
+</span><span>&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<p style="color:red;">This is red</p>
+
+<p style="font-size:20px;">This is thick</p>
+
+<p style="color:green;">This is green</p>
+
+<p style="color:green;font-size:20px;">This is thick and green</p>
+</div>
+</body>
+</html>

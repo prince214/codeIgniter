@@ -1,0 +1,116 @@
+<!Doctype HTML>
+<html>
+<head>
+ 
+<title>HTML Forms</title>
+</head>
+<body>
+
+
+<h1>HTML Forms</h1><p>HTML Forms are required when you want to collect some data from the site visitor. For example during user registration you would like to collect information such as name, email address, credit card, etc.</p><p>A form will take input from the site visitor and then will post it to a back-end application such as CGI, ASP Script or PHP script etc. The back-end application will perform required processing on the passed data based on defined business logic inside the application.</p><p>There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.</p><p>The HTML <b>&lt;form&gt;</b> tag is used to create an HTML form and it has following syntax:</p>
+  <hr />  
+    
+    <pre ><span >&lt;form</span><span > </span><span >action</span><span >=</span><span >"Script URL"</span><span > </span><span >method</span><span >=</span><span >"GET|POST"</span><span >&gt;</span><span >
+    form elements like input, textarea etc.
+</span><span >&lt;/form&gt;</span></pre>
+    
+        
+        <h2>Form Attributes</h2><p>Apart from common attributes, following is a list of the most frequently used form attributes:</p><table >
+<tbody><tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>action</td><td>Backend script ready to process your passed data.</td></tr>
+<tr><td>method</td><td>Method to be used to upload data. The most frequently used are GET and POST methods.</td></tr>
+<tr><td>target</td><td>Specify the target window or frame where the result of the script will be displayed. It takes values like _blank, _self, _parent etc.</td></tr>
+<tr><td>enctype</td><td><p>You can use the enctype attribute to specify how the browser encodes the data before it sends it to the server. Possible values are:</p>
+	<ul class="list">
+	<li><p><b>application/x-www-form-urlencoded</b> - This is the standard method most forms use in simple scenarios.</p></li>
+	<li><p><b>mutlipart/form-data</b> - This is used when you want to upload binary data in the form of files like image, word file etc.</p></li>
+	</ul>
+</td></tr>
+</tbody></table><p><b>Note: </b>You can refer to <a href="/perl/perl_cgi_programming.htm"><b>Perl &amp; CGI</b></a> for a detail on how form data upload works.</p><h2>HTML Form Controls</h2><p>There are different types of form controls that you can use to collect data using HTML form:</p><ul class="list">
+<li><p>Text Input Controls</p></li>
+<li><p>Checkboxes Controls</p></li>
+<li><p>Radio Box Controls</p></li>
+<li><p>Select Box Controls</p></li>
+<li><p>File Select boxes</p></li>
+<li><p>Hidden Controls</p></li>
+<li><p>Clickable Buttons</p></li>
+<li><p>Submit and Reset Button</p></li>
+</ul><h2>Text Input Controls</h2><p>There are three types of text input used on forms:</p><ul class="list">
+<li><p><b>Single-line text input controls -</b> This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML <b>&lt;input&gt;</b> tag.</p></li>
+<li><p><b>Password input controls -</b> This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTMl &lt;input&gt; tag.</p></li>
+<li><p><b>Multi-line text input controls -</b> This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML <b>&lt;textarea&gt;</b> tag.</p></li>
+</ul><h2>Single-line text input controls</h2><p>This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML &lt;input&gt; tag.</p><h3>Example</h3><p>Here is a basic example of a single-line text input used to take first name and last name:</p><pre class="prettyprint notranslate tryit prettyprinted"><span class="dec">&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Text Input Control</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;form</span><span > </span><span >&gt;</span><span >
+First name:  </span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"text"</span><span > </span><span >name</span><span >=</span><span >"first_name"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;br&gt;</span><span >
+Last name:  </span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"text"</span><span > </span><span >name</span><span >=</span><span >"last_name"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;/form&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<form>
+First name:  <input type="text" name="first_name">
+<br>
+Last name:  <input type="text" name="last_name">
+</form>
+</div><h3>Attributes</h3><p>Following is the list of attributes for &lt;input&gt; tag for creating text field.</p><table >
+<tbody><tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>type</td><td>Indicates the type of input control and for text input control it will be set to <b>text</b>.</td></tr>
+<tr><td>name</td><td>Used to give a name to the control which is sent to the server to be recognized and get the value.</td></tr>
+<tr><td>value</td><td>This can be used to provide an initial value inside the control.</td></tr>
+<tr><td>size</td><td>Allows to specify the width of the text-input control in terms of characters.</td></tr>
+<tr><td>maxlength</td><td>Allows to specify the maximum number of characters a user can enter into the text box.</td></tr>
+</tbody></table><h2>Password input controls</h2><p>This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTML &lt;input&gt; tag but type attribute is set to <b>password</b>.</p><h3>Example</h3><p>Here is a basic example of a single-line password input used to take user password:</p><pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span class="dec">&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Password Input Control</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;form</span><span > </span><span >&gt;</span><span >
+User ID :  </span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"text"</span><span > </span><span >name</span><span >=</span><span >"user_id"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;br&gt;</span><span >
+Password:  </span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"password"</span><span > </span><span >name</span><span >=</span><span >"password"</span><span > </span><span >/&gt;</span><span >
+</span><span >&lt;/form&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<form>
+User ID :  &nbsp; <input type="text" name="user_id">
+<br>
+Password:   <input type="password" name="user_id">
+</form>
+</div><h3>Attributes</h3><p>Following is the list of attributes for &lt;input&gt; tag for creating password field.</p><table >
+<tbody><tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>type</td><td>Indicates the type of input control and for password input control it will be set to <b>password</b>.</td></tr>
+<tr><td>name</td><td>Used to give a name to the control which is sent to the server to be recognized and get the value.</td></tr>
+<tr><td>value</td><td>This can be used to provide an initial value inside the control.</td></tr>
+<tr><td>size</td><td>Allows to specify the width of the text-input control in terms of characters.</td></tr>
+<tr><td>maxlength</td><td>Allows to specify the maximum number of characters a user can enter into the text box.</td></tr>
+</tbody></table><h2>Radio Button Control</h2><p>Radio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML &lt;input&gt; tag but type attribute is set to <b>radio</b>.</p><h3>Example</h3><p>Here is example HTML code for a form with two radio buttons:</p><pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span class="dec">&lt;!DOCTYPE html&gt;</span><span >
+</span><span >&lt;html&gt;</span><span >
+</span><span >&lt;head&gt;</span><span >
+</span><span >&lt;title&gt;</span><span >Radio Box Control</span><span >&lt;/title&gt;</span><span >
+</span><span >&lt;/head&gt;</span><span >
+</span><span >&lt;body&gt;</span><span >
+</span><span >&lt;form&gt;</span><span >
+</span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"radio"</span><span > </span><span >name</span><span >=</span><span >"subject"</span><span > </span><span >value</span><span >=</span><span >"maths"</span><span >&gt;</span><span > Maths
+</span><span >&lt;input</span><span > </span><span >type</span><span >=</span><span >"radio"</span><span > </span><span >name</span><span >=</span><span >"subject"</span><span > </span><span >value</span><span >=</span><span >"physics"</span><span >&gt;</span><span > Physics
+</span><span >&lt;/form&gt;</span><span >
+</span><span >&lt;/body&gt;</span><span >
+</span><span >&lt;/html&gt;</span></pre><p>This will produce following result:</p><div >
+<form>
+<input type="radio" name="subject" value="maths"> Maths
+<input type="radio" name="subject" value="physics"> Physics
+</form>
+</div><h3>Attributes</h3><p>Following is the list of attributes for radio button.</p><table >
+<tbody><tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>type</td><td>Indicates the type of input control and for checkbox input control it will be set to <b>radio</b>.</td></tr>
+<tr><td>name</td><td>Used to give a name to the control which is sent to the server to be recognized and get the value.</td></tr>
+<tr><td>value</td><td>The value that will be used if the radio box is selected.</td></tr>
+<tr><td>checked</td><td>Set to <i>checked</i> if you want to select it by default.</td></tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+HTML PROJECT
+CSE326
+PROJECT : 16
+-----------------------------
+Site Name- CodeIgniter
+Domain Name-codeigniter.com
+-----------------------------
+
+
+***********************************************************************
+IMPORTANT NOTE:
+1. Open the "index.html" file to access the main website-"Codeigniter".
+    (all the rest files are linked into the index.html file)
+
+***********************************************************************
+
+Group Members-
+1. Prince Paraste    46   11604723
+2. Shahil Shaik      47   11615915
+3. Vikram Singh      48   11609841
+
+Section:K1636
+
